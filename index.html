@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Form</title>
+  <link rel="stylesheet" href="./build/style/output.css">
+ 
+</head>
+
+<body >
+  <div class="flex items-center justify-center min-h-screen  text-gray-200">
+    
+    <div id="myModal" class="modal hidden fixed z-50 left-0 top-0 h-full w-full overflow-auto bg-[rgba(0,0,0,0.7)]">
+      <div class="bg-slate-900 p-8 rounded-lg shadow-lg w-full mx-auto max-w-lg relative">
+        <span id="closeModalBtn"
+          class="close text-gray-400 float-right text-xl absolute top-0 right-0 px-4 py-3">&times;</span>
+        <h2 class="text-2xl font-bold text-gray-200 mb-6 text-center">Book Details Form</h2>
+        <form id="bookForm">
+          <div class="mb-4">
+            <label for="bookName" class="block text-gray-300 text-sm font-semibold mb-2">Book Name</label>
+            <input type="text" id="bookName" name="bookName"
+              class="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-slate-600"
+              required>
+          </div>
+          <div class="mb-4">
+            <label for="bookAuthor" class="block text-gray-300 text-sm font-semibold mb-2">Book Author</label>
+            <input type="text" id="bookAuthor" name="bookAuthor"
+              class="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-slate-600"
+              required>
+          </div>
+          
+          <div class="mb-4">
+            <label for="bookGenre" class="block text-gray-300 text-sm font-semibold mb-2">Book Genre</label>
+            <select id="bookGenre" name="bookGenre"
+              class="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-slate-600"
+              required>
+              <option value="" disabled selected>Select a genre</option>
+              <option value="fiction">Fiction</option>
+              <option value="non-fiction">Non-Fiction</option>
+              <option value="science-fiction">Science Fiction</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="biography">Biography</option>
+              <option value="mystery">Mystery</option>
+              <option value="romance">Romance</option>
+              <option value="historical">Historical</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label for="bookImage" class="block text-gray-300 text-sm font-semibold mb-2">Book Image URL</label>
+            <input type="url" id="bookImage" name="bookImage"
+              class="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-slate-600"
+              required>
+          </div>
+          <div class="mb-4">
+            <label for="bookPrice" class="block text-gray-300 text-sm font-semibold mb-2">Book Price</label>
+            <input type="number" id="bookPrice" name="bookPrice"
+              class="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-slate-600"
+              required>
+          </div>
+          <div class="mb-4">
+            <label for="bookStock" class="block text-gray-300 text-sm font-semibold mb-2">Book Stock</label>
+            <input type="number" id="bookStock" name="bookStock"
+              class="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-slate-600"
+              required>
+          </div>
+          
+          <button type="submit"
+            class="w-full bg-slate-600 mt-6 text-gray-200 py-2 px-4 rounded-lg shadow hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500">Submit</button>
+        </form>
+    
+      </div>
+    </div>
+    <div class="flex flex-col gap-8 w-full max-w-[1400px] px-5">
+      <button id="openModalBtn"
+        class="bg-slate-600 max-w-[150px] text-gray-200 py-2 px-4 rounded-lg shadow hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500">
+        Open Modal
+      </button>
+      <div class=" p-8 rounded-lg shadow-3xl w-full mx-auto ">
+        <div id="bookContent" class="grid grid-cols-4 gap-8">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>var exports = {};</script>
+  <script type="module" src="./build/js/intex.js"></script>
+</body>
+
+</html>
